@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <float.h>
 #include "functions.h"
 
 
 int main(void) {
-    double nums[] = { -1.3, -3.7, 7, 6.5, 2, 4, 5.5, 9 };
+    int nums[3][5];
+    int i, j;
 
-    int elements = sizeof(nums) / sizeof(double);
-    int i;
-
-    reverse(nums, elements);
-    for (i = 0; i < elements; i++)
-        printf("%.1lf, ", nums[i]);
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 5; j++)
+            scanf("%dn", &nums[i][j]);
+        printf("\n");
+    }
+    show_ints(3, 5, nums);
 
     return 0;
 }
